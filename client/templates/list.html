@@ -1,0 +1,36 @@
+<div class="panel panel-default" ng-init="getProducts()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" 
+class="glyphicon glyphicon-list"> </span> Products List</p>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+			  <th>Product Name</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Actions</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="product in products">
+			  <td>{{ product.productname }}</td>
+              <td>{{ product.category}}</td>
+              <td>{{ product.description}}</td>
+              <td>{{ product.size}}</td>
+              <td>{{ product.price}}</td>
+              <td>{{ product.stock}}</td>                                        
+			  <td> 
+			    <a href="#/products/{{product._id}}/show" class="btn btn-info"> Show  </a>
+			    <a href="#/products/{{product._id}}/edit" class="btn btn-success"><span class="glyphicon glyphicon-edit"> </span> Edit  </a>
+			  	<a ng-click="deleteProduct(product._id)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span> Delete </a>
+			  </td>
+			</tr>
+			</tbody>
+		</table>		
+    <div>
+<div>

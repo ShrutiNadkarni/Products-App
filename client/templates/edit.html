@@ -1,0 +1,42 @@
+<div class="panel panel-default" ng-init="showProduct()">
+	<div class="panel-heading">
+	  <p class="panel-title">
+          <span style="color:#5bc0de;" class="glyphicon glyphicon-edit"> </span> Edit Product</p>
+	</div>
+	<div class="panel-body">
+		<form ng-submit="updateProduct()">
+    <div class="form-group">
+      <label for="productname">Product Name:</label>
+      <input type="text" class="form-control" id="productname" ng-model="product.productname" value="product.productname">
+    </div>
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <input type="text" class="form-control" id="category" ng-model="product.category" value="product.category">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="textarea" class="form-control" id="description" ng-model="product.description" value="product.description">
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" class="form-control" id="price" ng-model="product.price" value="product.price">
+    </div>
+    <div class="form-group">
+        <label for="size">Size:</label>
+        <select id="size" class="form-control" ng-model="product.size" value="product.size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input type="number" class="form-control" id="stock" ng-model="product.stock" value="product.stock">
+    </div>
+    <button type="submit" style="color:#5bc0de;" class="btn btn-default">Update</button>
+    <a href="#/products/list" class="btn btn-default"> Cancel</a>
+</form>		
+<div>
+<div>
